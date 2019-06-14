@@ -1,0 +1,27 @@
+#modelle {
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    padding-bottom: 5%;
+    user-select: none;
+}
+
+#modelle a {
+    text-decoration: none;
+}
+
+.selectableImage {
+    width: 45%;
+    height: 300px;
+    object-fit: contain;
+    border: solid transparent 1px;
+    transition: border 400ms ease-in-out;
+}
+
+.selectableImage:hover {
+    border: solid lightgrey 1px;
+}
+
+br {
+  user-select: none;
+}
