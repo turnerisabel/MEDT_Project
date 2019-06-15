@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CarConfigurator</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="../css/style2.css">
+    <link rel="stylesheet" href="../css/config-editor.css">
+    <link href="https://fonts.googleapis.com/css?family=Gruppo|Wire+One" rel="stylesheet">
+    <script src="../js/cars.js"></script>
+    <script src="../js/scrollAnimation.js" charset="utf-8"></script>
+    <script src="../js/config-editor.js"></script>
+
+</head>
+
+<body>
+
+<div class="nav">
+    <a href="../index.html" style="text-decoration: none; margin-left: -12%; color: grey;">WELCOME</a>
+    <a href="sale.html" style="text-decoration: none; padding-left: 5%; color: grey;">SALE</a>
+    <a href="configurator.html" class="activee"
+       style="text-decoration: none;  margin-left: 5%; color: black; padding-left: 2%;">CONFIGURATOR</a>
+    <a href="gallery.html" style="text-decoration: none; padding-left: 3%; color: grey;">GALLERY</a>
+    <a href="contact.html" style="text-decoration: none; padding-left: 5%; color: grey;">CONTACT</a>
+</div>
+<div id="text_config">
+    <p style="padding-left: 45%; font-size: 50pt; color: black; padding-top: 3%;">
+        Create your <br>dreamcar here!</p>
+    <hr>
+</div>
+
+
+<div id="configurator">
+
+    <div id="aClassCar" style="margin-top: 5%">
+        <span>
+            <img id="displayImage" src="../images/aklasse_config.JPG" alt="Bild nicht verfügbar"
+                 style="margin-left: 10%; float: left; padding-bottom: 5%;">
+        </span>
+        <p style="float: left; margin-right: 3%; font-size: 16pt; margin-left: 5%; text-decoration: underline;">Color:
+        </p>
+
+        <a id="black" style="margin-top: 1.2%" class="colorBox" onclick="setColor('black')"></a>
+        <a id="silver" class="colorBox selected-color" onclick="setColor('silver')"></a>
+        <a id="white" class="colorBox" onclick="setColor('white')"></a>
+        </span>
+    </div>
+    <p
+            style="font-size: 16pt; float:left; margin-left: -7%; margin-right: 2%; padding-top: 2%; text-decoration: underline">
+        Options: </p>
+
+    <div id="ausstattung" style="margin-left: 52%; font-size: 14pt; padding-top: 20px;">
+        <label><input type="checkbox" onclick="toggleCheckboxData(this)" value="Bluetooth/USB">Bluetooth/USB</label><br>
+        <label><input type="checkbox" onclick="toggleCheckboxData(this)" value="Speaker">Speaker</label><br>
+        <label><input type="checkbox" onclick="toggleCheckboxData(this)" value="Air conditioner">Air conditioner</label><br>
+        <label><input type="checkbox" onclick="toggleCheckboxData(this)" value="LED">LED</label><br>
+        <label><input type="checkbox" onclick="toggleCheckboxData(this)" value="Leather">Leather</label><br>
+        <label><input type="checkbox" onclick="toggleCheckboxData(this)" value="Keyless entry">Keyless entry</label><br>
+        <label><input type="checkbox" onclick="toggleCheckboxData(this)" value="Navigation System">Navigation
+            System</label><br>
+        <label><input type="checkbox" onclick="toggleCheckboxData(this)" value="Parking assistent">Parking
+            assistent</label><br>
+        <label><input type="checkbox" onclick="toggleCheckboxData(this)" value="Servo">Servo</label><br>
+        <label><input type="checkbox" onclick="toggleCheckboxData(this)" value="Parking sensor">Parking
+            sensor</label><br>
+        <label><input type="checkbox" onclick="toggleCheckboxData(this)" value="Tempomat">Tempomat</label><br>
+        <label><input type="checkbox" onclick="toggleCheckboxData(this)" value="Seat heating">Seat heating</label><br>
+        <label><input type="checkbox" onclick="toggleCheckboxData(this)" value="Sport seats">Sport seats</label><br>
+        <label><input type="checkbox" onclick="toggleCheckboxData(this)" value="Electric cargo bay">Electric cargo
+            bay</label><br>
+    </div>
+
+    <p
+            style="font-size: 16pt; float:left; margin-left: 39%; margin-right: 4%; padding-top: 1%; padding-right: 5.2%; text-decoration: underline">
+        Drive: </p>
+
+    <div id="antrieb" style="font-size: 14pt;">
+        <label><input type="radio" name="drive" onclick="setDrive(this)" value="Four-wheel drive" checked
+                      style="margin-top: 2%;">Four-wheel drive</label><br>
+        <label><input type="radio" name="drive" onclick="setDrive(this)" value="Front-wheel drive">Front-wheel
+            drive</label><br>
+        <label><input type="radio" name="drive" onclick="setDrive(this)" value="Rear-wheel drive">Rear-wheel
+            drive</label><br>
+    </div>
+
+    <div id="alu">
+        <img src="../images/alufelgen1.jpg" id="wheel1" class="wheel selected-wheel" onclick="setWheel('wheel1')"
+             style="width: 22%; height: auto">
+        <img src="../images/alufelgen4.jpg" id="wheel2" class="wheel" onclick="setWheel('wheel2')"
+             style="width: 22%; height: auto">
+        <img src="../images/alufelgen2.jpg" id="wheel3" class="wheel" onclick="setWheel('wheel3')"
+             style="width: 22%; height: auto">
+        <img src="../images/alufelgen3.jpg" id="wheel4" class="wheel" onclick="setWheel('wheel4')"
+             style="width: 22%; height: auto">
+    </div>
+
+    <button style="margin-left: 48%; margin-top: 4%; font-size: 24pt;" onclick="createCar()">Create Car</button>
+
+</div>
+
+<div id="data" style="margin-top: 3%;"></div>
+<hr style="margin-top: 3%; margin-bottom: 1%;">
+
+<p style="text-align: center;">© 2019. Mercedes-Benz Austria GmbH. | All rights reserved (provider) | Impressum |
+    Cookies | data protection | Legal Notice | AGB</p>
+
+
+</body>
+
+</html>
