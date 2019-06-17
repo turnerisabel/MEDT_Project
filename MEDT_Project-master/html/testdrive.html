@@ -56,7 +56,7 @@
         <label for="msg" style="font-size: 14pt;">Message</label>
     </div>
 </form>
-<button onclick="submit()" style="margin-left: 45%; margin-bottom: 4%">Submit</button>
+<button onclick="checkFormular()" style="margin-left: 45%; margin-bottom: 4%">Submit</button>
 
 <hr>
 <p style="text-align: center;">© 2019. Mercedes-Benz Austria GmbH. | All rights reserved (provider) | Impressum |
@@ -83,26 +83,26 @@
 
     }
 		
-    /* let vorname = document.getElementById("name");
+    let vorname = document.getElementById("name");
         vorname = vorname.value;
-    let nachname = document.getElementById("name");
-        nachname = nachname.value;
     let mail = document.getElementById("email");
 	let message = document.getElementById("msg");
 	
 	function checkFormular(){
             
-            if(name.length < 3){
+           /* if(vorname.length < 3){
                 alert("Enter your valid name.")  
-            } 
+            }*/
 			
-			if(mail1.value.indexOf('@') == -1){
+			if(mail.value.indexOf('@') == -1){
                 alert("Enter your valid email.")
-            }
+            } else{
+				submit();
+			}
 			 
             if(message.length < 4){
                 alert("Enter a message.")
             } 
-			*/
+	}
 </script>
 </html>
